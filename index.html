@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O site oficial de Pokémon</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Poppins&family=League+Spartan&display=swap" rel="stylesheet">
+
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="estilo.css" />
+  
+    <!-- Bootstrap CSS - Responsividade -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B0RSnjbdW1e4K1rZ765g771f6e5110" crossorigin="anonymous">
+
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  </head>
+
+
+  <body>
+    <!-- 1. Header (Cabeçalho + Menu de Navegação) -->
+    <header>
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+          <img src="img/logo-pokemon.png" alt="Logo Pokémon" /></a>
+        </div>
+        
+        <!-- Menu de navegação -->
+        <nav class="menu">
+          <ul>
+            <li><a href="#sobre" class="btn">Sobre</a></li>
+            <li><a href="#pokemons" class="btn">Pokémons</a></li>
+            <li><a href="#galeria" class="btn">Galeria</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- IMAGEM DE CAPA -->
+    <section class="capa">
+      <img class="img-capa" src="img/capa.png" alt="Imagem de capa Pokémon" />
+    </section>
+
+    <!-- 2. Seção Sobre -->
+    <section id="sobre" class="secao sobre">
+      <div class="container">
+        <h1>Pokémon</h1>
+        <p>Pokémon é uma das principais franquias de jogos de todos os tempos. A saga começou em 1996 com Pokémon Red e Blue, para Gameboy Color, e o seu sucesso foi tão grande que deu origem a um desenho animado e jogos que fazem sucesso até hoje, como Pokémon X e Y, Pokémon Fire Red, Pokémon Heart Gold e muitos outros. A série já teve games que fizeram sucesso nos consoles e nos portáteis, e agora a ideia é dominar também os celulares com Pokémon Go.</p>
+        <br />
+        <p class="destaque">Veja abaixo três dos principais personagens da primeira temporada:</p>
+      </div>
+    </section>  
+
+    <!-- 3. Seção Pokémons (Cards) -->
+    <section id="pokemons" class="secao pokemons">
+      <div class="container area cards">
+        
+        <!-- CARD 1 -->
+        <article class="card">
+          <h2>Bulbassauro</h2>
+          <img src="img/Bulbassauro.png" alt="Bulbassauro" />
+          <div class="informacoes">
+            <ul>
+              <li>ID: #001</li>
+              <li>Região: Kanto</li>
+              <li>Tipo: Grama</li>
+              <li>Habilidade: Supercrescimento</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card">
+          <h2>Charmander</h2>
+          <img src="img/Charmander.png" alt="Charmander" />
+          <div class="informacoes">
+            <ul>
+              <li>ID: #004</li>
+              <li>Região: Kanto</li>
+              <li>Tipo: Fogo</li>
+              <li>Habilidade: Chama</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
+          <h2>Pikachu</h2>
+          <img src="img/pikachu.png" alt="Pikachu" />
+          <div class="informacoes">
+            <ul>
+              <li>ID: #025</li>
+              <li>Região: Kanto</li>
+              <li>Tipo: Elétrico</li>
+              <li>Habilidade: Estática</li>
+            </ul>
+          </div>
+        </article>
+    </section>  
+
+      <!-- 4. Seção Galeria de Imagens -->
+      <section id="galeria" class="secao galeria">
+        <h2>Galeria</h2>
+        <p>Veja uma galeria de imagens de alguns Pokémons:</p>
+        
+        <div class="area area-image">
+          <!-- IMAGEM 1 -->
+          <a href="img/bulbassaur-image.jpg" data-lightbox="galeria" data-title="Bulbassaur">
+          <img class="image-sombra" src="img/bulbassaur-image.jpg" alt="Bulbassaur" /></a>
+
+          <!-- IMAGEM 2 -->          
+          <a href="img/charmander-image.png" data-lightbox="galeria" data-title="Charmander">
+          <img class="image-sombra" src="img/charmander-image.png" alt="Charmander" /></a>
+          
+          <!-- IMAGEM 3 -->
+          <a href="img/pikachu-image.jpg" data-lightbox="galeria" data-title="Pikachu">
+          <img class="image-sombra" src="img/pikachu-image.jpg" alt="Pikachu" /></a>
+          
+          <!-- IMAGEM 4 -->
+          <a href="img/emerald-image.jpg" data-lightbox="galeria" data-title="Emerald Pokémon">
+          <img class="image-sombra" src="img/emerald-image.jpg" alt="Emerald Pokémon" /></a>
+
+          <!-- IMAGEM 5 -->
+          <a href="img/arceus-image.jpg" data-lightbox="galeria" data-title="Arceus">
+          <img class="image-sombra" src="img/arceus-image.jpg" alt="Arceus" /></a>
+
+          <!-- IMAGEM 6 -->
+          <a href="img/piplup-image.jpg" data-lightbox="galeria" data-title="Piplup">
+          <img class="image-sombra" src="img/piplup-image.jpg" alt="Piplup" /></a>
+        </div>
+      
+
+      <!-- Link para saber mais -->
+      <div class="area info">
+        <p>
+          Saiba mais sobre o mundo dos Pokémons em:
+          <a href="https://www.pokemon.com/br/" target="_blank" rel="noopener">pokemon.com/br/</a>
+        </p>
+      </div>
+      
+    </section>
+
+    <!-- 5. Rodapé -->
+    <footer id="contato" class="rodape">
+      <div class="container">
+        <p>&copy; 2025 Pokémon Company. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    
+    <!-- Scripts da página -->
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  </body>
+</html>

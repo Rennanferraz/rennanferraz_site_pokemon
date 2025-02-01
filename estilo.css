@@ -1,0 +1,395 @@
+/* ===========================================
+    Variáveis Globais e Reset
+=========================================== */
+:root {
+  --cor-primaria: #ffcb05;         /* Cor inspirada no universo Pokémon */
+  --cor-secundaria: #3d7dca;
+  --cor-fundo: #f0f0f0;
+  --cor-texto: #333;
+  --cor-fundo-card: #fff;
+  --sombra-card: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --sombra-imagem: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --font-principal: 'Poppins', sans-serif;
+  --font-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================================
+   Estilos Globais
+=========================================== */
+body {
+  font-family: var(--font-principal);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding-top: 80px; /* Ajusta a altura do texto para não sobrepor no header */
+}
+
+
+/* Bootstrap complementar: */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  scroll-margin-top: 130px;
+}
+
+#sobre, #pokemons, #galeria {
+  scroll-margin-top: 130px !important;
+}
+
+/* ===========================================
+   1. Header (Cabeçalho + Menu de Navegação)
+=========================================== */
+header {
+  background: var(--cor-secundaria);
+  padding: 1rem 2rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a.btn {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a.btn:hover {
+  background: #fff;
+  color: var(--cor-secundaria);
+}
+
+/* ===========================================
+   2. Imagem de Capa
+=========================================== */
+.capa {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-capa {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================================
+   3. Seção Sobre
+=========================================== */
+.secao.sobre {
+  padding: 2rem 0;
+  background: var(--cor-fundo);
+}
+
+.secao.sobre h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+}
+
+.secao.sobre p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--cor-texto);
+  font-weight: 500;
+}
+
+.destaque {
+  font-weight: 900 !important;
+}
+
+
+/* ===========================================
+   4. Seção Pokémons (Cards)
+=========================================== */
+.secao.pokemons {
+  padding: 2rem;
+  background: #fff;
+}
+
+.area.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--cor-fundo-card);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--sombra-card);
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--cor-secundaria);
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Altura padrão para os cards */
+  object-fit: contain;
+  display: block;
+  box-shadow: var(--sombra-imagem);
+}
+
+/* Legenda/Informações sobre o card */
+.informacoes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(236, 241, 157, 0.9);
+  padding: 1rem;
+  text-align: center;
+  opacity: 0; /* Oculta inicialmente */
+  transform: translateY(20px);  /* Inicia abaixo */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .informacoes {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.informacoes ul {
+  list-style: none;
+}
+
+.informacoes li {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: var(--cor-texto);
+  font-weight: 900;
+}
+
+/* ===========================================
+   5. Seção Galeria de Imagens
+=========================================== */
+.secao.galeria {
+  padding: 2rem;
+  background: var(--cor-fundo);
+  text-align: center;
+}
+
+.secao.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+}
+
+.secao.galeria p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--cor-texto);
+}
+
+.area.area-image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-sombra {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-sombra:hover {
+  transform: scale(1.05);
+}
+
+/* Seção com o link "Saiba mais" */
+.area.info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.area.info p {
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+/* ===========================================
+   6. Rodapé
+=========================================== */
+.rodape {
+  background: var(--cor-secundaria);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.modal {
+  display: none; /* Oculto inicialmente */
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;         /* Ajuste conforme desejado */
+  max-width: 700px;   /* Largura máxima */
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo do modal, se necessário */
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* ===========================================
+   Responsividade para Dispositivos Móveis
+=========================================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .menu ul {
+    flex-direction: row;
+    /* gap: 0.5rem; */
+  }
+  
+  /* Para os cards, transformando a grid em galeria horizontal */
+  .area.cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    position: relative;
+  }
+  
+  .area.cards::after {
+    /* Gradiente que indica que há mais conteúdo à direita */
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .area.cards::before {
+    /* Mensagem de dica para o usuário */
+    content: "Deslize para ver mais";
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: var(--cor-texto);
+  }
+
+  .card {
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    position: relative;
+    /* Mantém o box-shadow já definido */
+    box-shadow: var(--sombra-card);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px; /* Ajuste se necessário */
+    object-fit: contain; /* Exibe a imagem por completo */
+    display: block;
+    box-shadow: var(--sombra-imagem);
+  }
+  
+  .informacoes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    opacity: 0;      /* Sempre visível no mobile */
+    padding: 0.5rem;
+    /* Adicione uma leve sombra interna se desejar */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: auto; /* Se não quiser que interfira no toque, ou remova se desejar interatividade */
+  }
+
+  .informacoes ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .informacoes li {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    font-weight: 900;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+  }
+}
+
+/* Personalize os itens do menu */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Ajuste para centralizar os itens do menu quando colapsados */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
