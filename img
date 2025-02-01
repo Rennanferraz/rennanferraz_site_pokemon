@@ -1,3 +1,0 @@
-mkdir imagens            # Cria a pasta de imagens
-mkdir scripts            # Cria a pasta para scripts
-mv *.jpg *.png imagens/  # Move as imagens para a pasta imagens
